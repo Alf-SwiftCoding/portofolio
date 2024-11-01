@@ -112,14 +112,14 @@ body {
 .tablecontainer {
   display: flex;
   justify-content: center;
+  padding: 0.5vw;
 }
 
 .social-icons {
   /* display: flex; */
+  display: flex;
   flex-direction: column; /* Tampilkan ikon dan teks dalam satu kolom */
-  gap: 15px; /* Jarak antar ikon */
-  position: relative;
-  left: -4vw;
+  gap: 1vh; /* Jarak antar ikon */
 }
 
 .social-icons a {
@@ -137,6 +137,20 @@ body {
 
 .iconcontainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
 }
+
+.container1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5vw;
+}
+
+.display-image {
+  display: block;
+  width: 25vw; 
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
