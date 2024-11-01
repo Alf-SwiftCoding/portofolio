@@ -1,0 +1,142 @@
+  /* Style umum untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* Container untuk menu */
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1vh;
+    position: fixed;
+    top: 1.5dvh;
+    left: 1dvw;
+  }
+
+  /* Style untuk tombol menu */
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 2vh 0.5vw;
+    background-color: #333;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    height: 1.5dvh;
+    width: 7dvw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  /* Efek hover */
+  .menu a:hover {
+    background-color: #00d9ff;          /* Ubah warna background saat hover */
+    transform: scale(1.05);          /* Skala sedikit lebih besar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Tambah bayangan */
+  }
+ 
+  .popup {
+    display: none; /* Tersembunyi secara default */
+    position: relative; 
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang gelap transparan */
+  }
+
+  /* Konten popup */
+  .popup-content {
+    background-color: rgb(82, 82, 82);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    top: 1vh;
+    left: 9.5vw;
+    height: 200vh;
+    width: 87vw;
+  }
+  
+  /* Tombol tutup (x) */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .close:hover {
+    color: #555;
+  }
+
+  .rowitem {
+    display: flex;
+    flex-direction: row; 
+    /* Susun box secara horizontal */
+    /* gap: 20px;  Jarak antar box */
+  }
+
+  .Beranda {
+    position: absolute;
+    left: 10vw;
+    top: 2vh;
+    width: 88vw;
+  }
+
+  .Beranda>h1 {
+    display: flex;
+    justify-content: center;
+  }
+  .Beranda p1 {
+    display: flex;
+    text-align: justify;
+  }
+
+  td {
+    text-align: left;
+  }
+
+  table {
+    width: 60vw;/* 
+    padding: 1vw; */
+    border-collapse: collapse; 
+  }
+
+.tablecontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  /* display: flex; */
+  flex-direction: column; /* Tampilkan ikon dan teks dalam satu kolom */
+  gap: 15px; /* Jarak antar ikon */
+  position: relative;
+  left: -4vw;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex; /* Ikon dan teks berada dalam satu baris */
+  gap: 10px; /* Jarak antara ikon dan teks */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #4CAF50; /* Warna saat ikon di-hover */
+}
+
+.iconcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

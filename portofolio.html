@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="portofolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-color: white;
+      transition: background-color 1s;  /*Efek transisi brackground saat berubah warna */
+    } 
+   </style> 
+</head>
+
+<body>
+  <script>
+    function changeBackgroundColor() {
+    document.body.style.backgroundColor = "black";
+    }
+    window.onload = changeBackgroundColor;
+  </script>
+
+  <div class="Beranda">
+    <h1>Hi, Welcome to My Website</h1> <br>
+    <p1> Thank you for taking the time to explore my work and professional journey. Here, you will find a showcase of my skills, projects, and experiences that reflect my dedication, creativity, and passion for excellence. I’m driven by a commitment to innovation and a focus on achieving impactful results. Whether you’re looking for a collaborator, a solution-oriented problem solver, or a creative mind with a technical edge, I hope this portfolio provides insight into what I can bring to your team. Please feel free to reach out—I look forward to connecting with you and discussing how we can create something remarkable together.
+    <br><br>Warm regards, [Alfayyad]</p1>
+  </div>
+
+  <div class="rowitem">
+    <div class="menu">
+      <a button class="popup-btn" data-popup="aboutPopup">About Me</a>
+      <a button class="popup-btn" data-popup="portfolioPopup">Portfolio</a>
+      <a button class="popup-btn" data-popup="contactPopup">Contact Me</a>
+    </div>
+
+  <div id="aboutPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" data-popup="aboutPopup">&times;</span>
+        <h2>Muhammad Ghazi Alfayyad</h2>
+        <p>Mechanical Engineer</p>
+        <div class="iconcontainer">
+        <div class="social-icons">
+          <a href="mailto:alf.swiftengineer@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i> <span>alf.swiftengineer@gmail.com</span>
+          </a>
+          <a href="https://www.youtube.com/@SwiftEngineer" target="_blank">
+            <i class="fab fa-youtube"></i> <span>SwiftEngineer</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ghazi-alfayyad-61bb9b317" target="_blank">
+            <i class="fab fa-linkedin"></i> <span>ghazialf</span>
+          </a>
+        </div>
+      </div>
+    <div class="tablecontainer">
+      <table>
+        <tbody>
+          <tr>
+            <td>Education</td>
+            <td>Bachelor of Engineering</td>
+            <td>University Andalas</td>
+            <td>August, 2024</td>
+          </tr>
+          <tr>
+            <td>Internship Student</td>
+            <td>FEA for basic structural</td>
+            <td>Semen Padang</td>
+            <td>february, 2023</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>alf.swiftengineer@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Linkedin</td>
+            <td>https://www.linkedin.com/in/ghazi-alfayyad-61bb9b317</td>
+          </tr>
+          <tr>
+            <td>youtube</td>
+            <td>https://www.youtube.com/@SwiftEngineer</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <p>: alf.swiftengineer@gmail.com</p>
+      <p>: https://www.linkedin.com/in/ghazi-alfayyad-61bb9b317</p>
+      <p>: https://www.youtube.com/@SwiftEngineer</p>
+    </div>
+  </div>
+
+    <div id="portfolioPopup" class="popup">
+        <div class="popup-content">
+          <span class="close" data-popup="portfolioPopup">&times;</span>
+          <h2>Portfolio</h2>
+          <p>Welcome to the Portfolio section.</p>
+        </div>
+    </div>
+
+    <div id="contactPopup" class="popup">
+        <div class="popup-content">
+          <span class="close" data-popup="contactPopup">&times;</span>
+          <h2>Contact Me</h2>
+          <p>This is the Contact Me section</p>
+        </div>
+    </div>
+    
+    <script src="portofolio.js"></script>
+    
+    </div>
+
+  
+</body>
+</html>

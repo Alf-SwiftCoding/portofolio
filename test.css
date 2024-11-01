@@ -1,0 +1,75 @@
+/* Style umum untuk body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    height: 100vh; /* Tinggi penuh viewport */
+    background-color: #f0f0f0;
+  }
+  
+  /* Kontainer untuk tombol dan popup */
+  .container {
+    display: flex;
+    flex-direction: column; /* Susun tombol dalam kolom */
+    align-items: flex-start; /* Rata kiri untuk tombol */
+  }
+  
+  /* Kontainer untuk tombol */
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Susun tombol secara vertikal */
+    gap: 10px; /* Jarak antara tombol */
+  }
+  
+  /* Style untuk tombol */
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Warna latar tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut membulat */
+    transition: background-color 0.3s; /* Transisi saat hover */
+  }
+  
+  /* Efek hover untuk tombol */
+  .button:hover {
+    background-color: #45a049; /* Warna saat hover */
+  }
+  
+  /* Style untuk popup box */
+  .popup-box {
+    display: none; /* Tersembunyi secara default */
+    position: absolute; /* Memungkinkan popup muncul di samping tombol */
+    left: 20px; /* Jarak dari tombol */
+    top: 50%; /* Posisikan di tengah secara vertikal */
+    transform: translateY(-50%); /* Mengatur agar benar-benar berada di tengah */
+  }
+  
+  /* Konten popup */
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Tombol tutup (x) */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .close:hover {
+    color: #555;
+  }
+  
