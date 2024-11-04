@@ -3,9 +3,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #000000;
     color: #ffffff;
-    display: flex;
-    height: 100%;
-    margin: 0;
   }
 
   P {
@@ -38,43 +35,77 @@ body {
   }
   
   /* Container untuk menu */
-  .menu {
+.menu-btn {
+    font-size: 1.4vw;
+    color: white;
+    padding: 0;
+    background-color: #333;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000; /* Ensures the button is in the front */
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    height: 5vh;
+    width: 9vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    left: 1vw;
+    top: 1.5vh;
+}
+
+  /* Style untuk tombol menu */
+  .nav-menu.open {
+    max-height: 300px; /* Set a height for the animation */
+    opacity: 1;
+}
+
+.popup-btn {
+    font-size: 1.4vw;
+  }
+
+.nav-menu {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 1.5vh;
     position: fixed;
-    top: 1.5dvh;
-    left: 1dvw;
-  }
+    top: 7.5vh;
+    left: 1dvw;    
+    gap: 1.5vh;
+    z-index: 1000;
+    overflow: hidden;
+    max-height: 0; /* Initially hidden */
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Animation effect */
+}
 
-  /* Style untuk tombol menu */
-  .menu a {
+.nav-menu a {
     text-decoration: none;
     color: white;
-    padding: 2vh 0.5vw;
+    padding: 0;
     background-color: #333;
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     height: 5vh;
-    width: 7vw;
+    width: 9vw;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-    
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
   }
-  
-  /* Efek hover */
-  .menu a:hover {
+
+  .nav-menu a:hover {
     background-color: #00d9ff;          /* Ubah warna background saat hover */
     transform: scale(1.05);          /* Skala sedikit lebih besar */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Tambah bayangan */
   }
- 
+   
   .popup {
     display: none; /* Tersembunyi secara default */
     position: relative; 
@@ -88,10 +119,10 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
-    top: 1vh;
-    left: 9.5vw;
+    /* top: 1vh;
+    left: 1vw; */
     height: 200vh;
-    width: 87vw;
+    width: 96vw;
   }
   
   .popup-btn {
@@ -115,8 +146,6 @@ body {
   .rowitem {
     display: flex;
     flex-direction: row; 
-    /* Susun box secara horizontal */
-    /* gap: 20px;  Jarak antar box */
   }
 
   .Beranda {

@@ -1,3 +1,26 @@
+function toggleMenu() {
+  const menu = document.getElementById('navMenu');
+  menu.classList.toggle('open');
+  
+  // Add event listener to close menu when clicking outside
+  if (menu.classList.contains('open')) {
+      document.addEventListener('click', closeMenuOnOutsideClick);
+  } else {
+      document.removeEventListener('click', closeMenuOnOutsideClick);
+  }
+}
+
+function closeMenuOnOutsideClick(event) {
+  const menu = document.getElementById('navMenu');
+  const menuButton = document.querySelector('.menu-btn');
+  
+  // Check if click was outside menu and button
+  if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+      menu.classList.remove('open');
+      document.removeEventListener('click', closeMenuOnOutsideClick);
+  }
+}
+
 const popupButtons = document.querySelectorAll(".popup-btn");
 const popups = document.querySelectorAll(".popup");
 

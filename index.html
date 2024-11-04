@@ -28,13 +28,12 @@
     <br><br>Warm regards, [Alfayyad]</p1>
   </div>
 
-  <div class="rowitem">
-
-    <div class="menu">
-      <a button class="popup-btn" data-popup="aboutPopup">About Me</a>
-      <a button class="popup-btn" data-popup="portfolioPopup">Portfolio</a>
-      <a button class="popup-btn" data-popup="contactPopup">Contact Me</a>
-    </div>
+  <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+  <div class="nav-menu" id="navMenu">
+    <a button class="popup-btn" data-popup="aboutPopup">About Me</a>
+    <a button class="popup-btn" data-popup="portfolioPopup">Portfolio</a>
+    <a button class="popup-btn" data-popup="contactPopup">Contact Me</a>
+   </div>
 
     <div id="aboutPopup" class="popup">
       <div class="popup-content">
@@ -173,7 +172,6 @@
     
     <script src="portofolio.js"></script>
     
-  </div>
 
 </body>
 </html>
