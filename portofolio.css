@@ -119,8 +119,6 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
-    /* top: 1vh;
-    left: 1vw; */
     height: 200vh;
     width: 96vw;
   }
@@ -213,7 +211,7 @@ body {
 }
 
 table {
-  width: 60vw;
+  width: 69vw;
   font-size: 1vw;
   font-size: 1.5vw;
   border-collapse: collapse; 
