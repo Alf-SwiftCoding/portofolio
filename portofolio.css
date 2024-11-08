@@ -4,39 +4,34 @@ body {
     background-color: #000000;
     color: #ffffff;
   }
-
   P {
-    font-size: 1vw;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    align-items: center;
   }
-
   h1 {
-    font-size: 3vw;
+    font-size: 40px;
     padding: 0vw;
     margin-top: 2vh;
     margin-bottom: 1vh;
   }
-
-
   h2 {
-    font-size:2vw;
+    font-size:29px;
     margin-top: 1vh;
     margin-bottom: 3vh;
   }
-
+  h3 {
+    font-size: 15px;
+    font-weight: 100;
+  }
   br {
     font-size: 3vh;
     gap: 3vh;
   }
-
   .textstyle {
-    font-size: 1.7vw;
+    font-size: 23px;
   }
   
-  /* Container untuk menu */
-.menu-btn {
-    font-size: 1.4vw;
+  .menu-btn {
+    font-size: 15px;
     color: white;
     padding: 0;
     background-color: #333;
@@ -53,8 +48,8 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
-    left: 1vw;
-    top: 2vh;
+    left: 2vw;
+    top: 3vh;
 }
 
   /* Style untuk tombol menu */
@@ -64,7 +59,7 @@ body {
 }
 
 .popup-btn {
-    font-size: 1.4vw;
+    font-size: 15px;
   }
 
 .nav-menu {
@@ -72,8 +67,8 @@ body {
     justify-content: space-between;
     flex-direction: column;
     position: fixed;
-    top: 8vh;
-    left: 1dvw;    
+    top: 9.5vh;
+    left: 2vw;    
     gap: 1.5vh;
     z-index: 1000;
     overflow: hidden;
@@ -108,7 +103,9 @@ body {
    
   .popup {
     display: none; /* Tersembunyi secara default */
-    position: relative; 
+    position: relative;
+    left: 0.5vw;
+    top: 1vh; 
     background-color: rgba(0, 0, 0, 0.5); /* Latar belakang gelap transparan */
   }
 
@@ -121,10 +118,6 @@ body {
     position: relative;
     height: 200vh;
     width: 96vw;
-  }
-  
-  .popup-btn {
-    font-size: 1.4vw;
   }
   
   /* Tombol tutup (x) */
@@ -146,20 +139,68 @@ body {
     flex-direction: row; 
   }
 
-  .Beranda {
-    position: absolute;
-    left: 10vw;
-    top: 2vh;
-    width: 88vw;
-  }
-
-  .Beranda>h1 {
+  .Center {
     display: flex;
     justify-content: center;
   }
-  .Beranda p1 {
+
+  .Beranda {
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+    align-content: center;
+  }
+  #container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  #typingHeadingContainer {
+    font-size: 37px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the typing effect container */
+  #typingTextContainer {
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    white-space: pre-wrap;
+    display: flex;
+    align-items: center;
     text-align: justify;
+    max-width: 100vw;
+    line-height: 1.6;
+  }
+  
+  
+  /* Blinking cursors */
+  #headingCursor, #textCursor {
+    font-weight: bold;
+    animation: blink 0.7s steps(1) infinite;
+    color: #ffffff;
+  }
+  
+  /* Keyframe for the blinking cursor */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  @media (max-width: 1024px) {
+    #typingTextContainer {
+        font-size: 20px;
+    }
+    #typingHeadingContainer {
+      font-size: 32px;
+    }
   }
 
   td {
@@ -180,7 +221,6 @@ body {
 
 .social-icons a {
   color: #ffffff;
-  font-size: 20px;
   text-decoration: none;
   display: flex; /* Ikon dan teks berada dalam satu baris */
   gap: 10px; /* Jarak antara ikon dan teks */
@@ -215,50 +255,109 @@ table {
   font-size: 1vw;
   font-size: 1.5vw;
   border-collapse: collapse; 
-  color: #000000;
+  color: #fffcfc;
+  border-collapse: separate; 
+  border-spacing: 5px 7px;
 }
 
-.Education {
-  background-color: #637afa;
+tbody tr:nth-child(even):hover {
+  background-color: rgb(82, 82, 82);
+  color: rgb(255, 255, 255);
 }
 
-.Course {
-  background-color: #7bebfa;
+tbody tr:nth-child(odd):hover {
+  background-color: #525252;
+  color: white;
 }
 
-.ESkill {
-  background-color: antiquewhite;
+.Education:nth-child(even) {
+  background-color: #3691b4f1;
 }
 
-.PSkill {
-  background-color: #ecff83;
+.Education:nth-child(odd) {
+  background-color: #5b99b1f1;
 }
 
-.DSkill {
-  background-color: #83ffa8;
+.IStudent:nth-child(even) {
+  background-color: #3057aaf1;
+}
+
+.IStudent:nth-child(odd) {
+  background-color: #4d6cadf1;
+}
+
+.Course:nth-child(even) {
+  background-color: #7a33b4f1;
+}
+
+.Course:nth-child(odd) {
+  background-color: #8b58b4f1;
+}
+
+.ESkill:nth-child(even) {
+  background-color: #a835b8f1;
+}
+
+.ESkill:nth-child(odd) {
+  background-color: #ac58b8f1;
+}
+
+.PSkill:nth-child(even) {
+  background-color: #a83080f1;
+}
+
+.PSkill:nth-child(odd) {
+  background-color: #a54886f1;
+}
+
+.DSkill:nth-child(even) {
+  background-color: #b43550f1;
+}
+
+.DSkill:nth-child(odd) {
+  background-color: #b14d63f1;
+}
+
+.inputvideo {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 40vw;
 }
 
 .video-container {
-  width: 80%;
-  max-width: 800px;
-  min-width: 550px;
-  height: 450px;
-  border: none;
-  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background: #000;
 }
 
-iframe {
+iframe {  
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 0;
+}
+
+.explain {
+  color: #000000;
+  background-color: #dddddd;
+  width: 36vw;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0vh 2vw;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .input-row {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: space-around;
+  gap: 2vw;
   margin-bottom: 20px;
+  align-items: flex-start;
 }
 
 .input-group {
@@ -333,7 +432,7 @@ button:hover {
 
 @media (max-width: 600px) {
   .form-container {
-    width: 90%;
+    width: 85%;
   }
 
   input[type="text"],
@@ -344,5 +443,43 @@ button:hover {
 
   button {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  #typingTextContainer {
+      font-size: 14px;
+  }
+  h1 {
+      font-size: 30px;
+  }
+  h2 {
+      font-size: 19px;
+  }
+  .textstyle {
+    font-size: 16px;
+  }
+  .menu-btn {
+    font-size: 11px;
+  }
+  .popup-btn {
+    font-size: 11px;
+  }
+  table{
+    width: 63vw;
+  }
+}
+
+/* Layar sangat kecil (ponsel dalam posisi potret) */
+@media (max-width: 480px) {
+  #typingTextContainer {
+      font-size: 1em;
+      max-width: 90%; /* Menambah lebar untuk mengisi lebih banyak area layar */
+  }
+  h1 {
+      font-size: 1.8em;
+  }
+  h2 {
+      font-size: 1.4em;
   }
 }

@@ -54,3 +54,40 @@ window.addEventListener("click", (event) => {
     event.target.style.display = "none";
   }
 });
+
+
+// Define the texts for heading and paragraph
+const headingText = "Hi, Welcome to My Website";
+const paragraphText = `Thank you for taking the time to explore my work and professional journey. Here, you will find a showcase of my skills, projects, and experiences that reflect my dedication, creativity, and passion for excellence. I’m driven by a commitment to innovation and a focus on achieving impactful results. Whether you’re looking for a collaborator, a solution-oriented problem solver, or a creative mind with a technical edge, I hope this portfolio provides insight into what I can bring to your team. Please feel free to reach out I look forward to connecting with you and discussing how we can create something remarkable together.`;
+
+let headingIndex = 0;
+let paragraphIndex = 0;
+
+function typeHeading() {
+    const typingHeading = document.getElementById("typingHeading");
+
+    // Append the next character in the heading text
+    if (headingIndex < headingText.length) {
+        typingHeading.innerHTML += headingText.charAt(headingIndex);
+        headingIndex++;
+        setTimeout(typeHeading, 50); // Adjust speed for heading typing effect
+    } else {
+        // Once heading is typed, start typing paragraph
+        document.getElementById("typingTextContainer").style.display = "flex";
+        typeParagraph();
+    }
+}
+
+function typeParagraph() {
+    const typingText = document.getElementById("typingText");
+
+    // Append the next character in the paragraph text
+    if (paragraphIndex < paragraphText.length) {
+        typingText.innerHTML += paragraphText.charAt(paragraphIndex);
+        paragraphIndex++;
+        setTimeout(typeParagraph, 15);  // Adjust speed for paragraph typing effect
+    }
+}
+
+// Start typing effect for the heading on page load
+window.addEventListener("load", typeHeading);
