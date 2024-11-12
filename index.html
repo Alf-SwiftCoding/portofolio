@@ -206,64 +206,42 @@
     <div class="popup-content">
       <span class="close" data-popup="contactPopup">&times;</span>
       <h1>Contact Me</h1>
-      <h2>This is the Contact Me section</h2>
-      <div class="input-row">
-        <div class="input-group">
-          <div class="form-container">
-            <form action="/submit-form" method="post">           
-              <!-- Input Text untuk Nama -->
-              <label for="name">Nama:</label>
-              <input type="text" id="name" name="name" placeholder="Masukkan nama" required>
-            
-              <!-- Input Tanggal untuk Tanggal Lahir -->
-              <label for="dob">Tanggal Lahir:</label>
-              <input type="date" id="dob" name="dob" required>
-              
-              <!-- Radio Button untuk Jenis Kelamin -->
-              <label>Jenis Kelamin:</label>
-              <div class="gender-options">
-                <input type="radio" id="male" name="gender" value="male" required>
-                <label for="male">Laki-laki</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Perempuan</label>
-              </div>
-              
-              <!-- Multiline Text untuk Pesan -->
-              <label for="message">Pesan:</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini"></textarea>
-          
-              <!-- Tombol Submit -->
-              <button type="submit">Submit</button>
-            
-            </form>
-          </div>
-        </div>
-        <div class="input-group">
-          <div class="form-container">
-            <h3>Current time:</h3>
-            <p id="current-time"></p>
-            <script>
-              function updateTime() {
-                const options = { 
-                weekday: 'long', 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric', 
-                hour: '2-digit', 
-                minute: '2-digit', 
-                second: '2-digit', 
-                timeZoneName: 'short' 
-                };   
-                const currentDate = new Date();
-                const formattedTime = currentDate.toLocaleString('en-US', options);     
-                document.getElementById('current-time').innerText = formattedTime;
-              }
-              setInterval(updateTime, 1000);   
-              updateTime();
-            </script>
-          </div>
+      <h2>Please feel free to reach out</h2>
+      <div class="input-group">
+        <div class="form-container">
+          <h3>Current time:</h3>
+          <p id="current-time"></p>
+          <script>
+            function updateTime() {
+              const options = { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric', 
+              hour: '2-digit', 
+              minute: '2-digit', 
+              second: '2-digit', 
+              timeZoneName: 'short' 
+              };   
+              const currentDate = new Date();
+              const formattedTime = currentDate.toLocaleString('en-US', options);     
+              document.getElementById('current-time').innerText = formattedTime;
+            }
+            setInterval(updateTime, 1000);   
+            updateTime();
+          </script>
         </div>
       </div>
+      <div class="form-container1">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQcvU76SgU3esQ6lipVijDvOfh9ZWMl5IXuKtEAa5FKyF3HA/viewform?embedded=true" 
+                width="640" 
+                height="999" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">Loading…</iframe>
+      </div>
+        
+    </div>
     </div>
   </div>
   <script src="portofolio.js"></script>   
